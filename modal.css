@@ -68,6 +68,33 @@ img {
   display: none;
 }
 
+#alertName {
+  font-size: small;
+}
+
+.alertMessage {
+  font-size: small;
+  color: #f00;
+}
+
+.thankYouMessage {
+  padding: 250px 20px 250px 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.btn-close {
+  font-size: 20px;
+  background: #fe142f;
+  display: flex;
+  margin: auto;
+  padding: 2em;
+  color: #fff;
+  padding: 0.75rem 2.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
   .topnav a {display: none;}
   .topnav a.icon {
@@ -110,9 +137,6 @@ main {
   padding-right: 2vw;
   margin: 1px 20px 15px;
   border-radius: 2rem;
-  text-align: justify;
-
-
 }
 
 .modal-btn {
@@ -200,6 +224,7 @@ input {
   border: 0.8px solid #ccc;
   outline: none;
 }
+
 .text-control {
   margin: 0;
   padding: 8px;
@@ -478,6 +503,9 @@ footer {
   padding-right: 2vw;
   margin: 0 20px;
 }
+
+
+
 @media screen and (max-width: 800px) {
   .hero-section {
     display: block;
