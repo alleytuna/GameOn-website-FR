@@ -64,7 +64,7 @@ function validate() {
   let userTermsChecked;
 
   //check name
-  if (firstName.value.match(/^[a-z ,.'-]+$/i) && firstName.value.length > 2) {
+  if (firstName.value.match(/^[a-z ,.'-]+$/i) && firstName.value.length >= 2) {
     firstAlert.style.display = "none";
     firstNameChecked = true;
   } else {
@@ -74,7 +74,7 @@ function validate() {
     firstNameChecked = false;
   }
 
-  if (lastName.value.match(/^[a-z ,.'-]+$/i) && lastName.value.length > 2) {
+  if (lastName.value.match(/^[a-z ,.'-]+$/i) && lastName.value.length >= 2) {
     lastAlert.style.display = "none";
     lastNameChecked = true;
   } else {
@@ -161,8 +161,18 @@ function validate() {
   }
 }
 
-//close modal event by clicking on close icon
-var closeButton = document.getElementsByClassName("close")[0];
+// close modal event by clicking on close icon
+const closeIcon = document.getElementsByClassName("close")[0];
+
+closeIcon.onclick = function() {
+  modalbg.style.display = "none";
+  form.style.display = "block";
+  confirmationMessage.style.display = "none";
+}
+
+// close modal by clicking on "fermer" button
+const closeButton = document.getElementsByClassName("btn-close")[0];
+
 closeButton.onclick = function() {
   modalbg.style.display = "none";
   form.style.display = "block";
