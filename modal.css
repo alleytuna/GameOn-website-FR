@@ -487,6 +487,7 @@ input[data-error]::after {
   height: 100%;
   display: block;
   padding: 0;
+  object-fit: cover;
 }
 .copyrights {
   color: #fe142f;
@@ -504,7 +505,11 @@ footer {
   margin: 0 20px;
 }
 
-
+@media screen and (max-width: 1000px) {
+  .hero-headline {
+    font-size: 75px;
+  }
+}
 
 @media screen and (max-width: 800px) {
   .hero-section {
@@ -514,7 +519,7 @@ footer {
   .hero-content {
     background: #fff;
     color: #000;
-    padding: 20px;
+    padding: 20px;    
   }
   .hero-content::after {
     content: unset;
@@ -542,6 +547,16 @@ footer {
   .copyrights {
     margin-top: 50px;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero-content {
+    min-width: 0px;
+  }
+
+  .hero-headline {
+    font-size: 50px;
   }
 }
 

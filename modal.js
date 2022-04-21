@@ -64,7 +64,7 @@ function validate() {
   let userTermsChecked;
 
   //check name
-  if (firstName.value.match(/^[a-z ,.'-]+$/i) && firstName.value.length >= 2) {
+  if (firstName.value.match(/^[a-z ,.'-]+$/i) && firstName.value.trim().length >= 2) {
     firstAlert.style.display = "none";
     firstNameChecked = true;
   } else {
@@ -74,7 +74,7 @@ function validate() {
     firstNameChecked = false;
   }
 
-  if (lastName.value.match(/^[a-z ,.'-]+$/i) && lastName.value.length >= 2) {
+  if (lastName.value.match(/^[a-z ,.'-]+$/i) && lastName.value.trim().length >= 2) {
     lastAlert.style.display = "none";
     lastNameChecked = true;
   } else {
